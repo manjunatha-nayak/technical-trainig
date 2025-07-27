@@ -1,0 +1,362 @@
+1.// Online C compiler to run C program online
+#include <stdio.h>
+#include<math.h>
+#include<stdlib.h>
+int main() {
+    // Write C code here
+    printf("%f",ceil(4.8));
+    printf("\n%f",floor(4.9));
+    printf("\n%d",abs(-20.25));
+    printf("\n%f",fabs(-20.25));
+    printf("\n%f",sqrt(26));
+    printf("\n%f",pow(2,2));
+    printf("\n%f",log(2));
+    printf("\n%f",log10(2));
+    printf("\n%f",exp(2));
+    printf("\n%f",sin(30));
+    printf("\n%f",cos(30));
+    printf("\n%f",tan(30));
+    printf("\n%f",round(4.8));
+    printf("\n%f",round(2.5));
+    return 0;
+    
+}
+
+
+2.// Online C compiler to run C program online
+#include <stdio.h>
+#include<math.h>
+#include<stdlib.h>
+int main() {
+   float a=5,b=3,c;
+   c=sqrt(a)+pow(a,b);
+   printf("%f",c);
+   
+   
+    return 0;
+    
+}
+
+3.
+// Online C compiler to run C program online
+#include <stdio.h>
+#include<math.h>
+#include<stdlib.h>
+int main() {
+   float a=5,b=3,c;
+  c=(log(a)+log10(a)+exp(a))/sqrt(b);
+  printf("%f",c);
+   
+   
+    return 0;
+    
+}
+4.
+// Online C compiler to run C program online
+#include <stdio.h>
+#include<math.h>
+int main() 
+{
+    int p,m,c,total;
+    float avg;
+    printf("\nmarks in p:");
+    scanf("%d",&p);
+    printf("\nmarks in m:");
+    scanf("%d",&m);
+    printf("\n marks in c:");
+    scanf("%d",&c);
+    
+    if(p>35)
+    {
+        if(m>35)
+        {
+            if(c>35)
+            {
+              total=p+m+c;
+              avg=total/3;
+              printf("\n passed in all the subjects");
+              printf("\ntotal marks scored is %f",avg);
+            }
+            else
+            {
+                printf("failed in c");
+            }
+        }else
+        {
+            printf("failed in m");
+        }
+    }else
+    {
+        printf("failed in p");
+       
+    }
+    
+    
+    if(avg>90)
+    {
+        printf("\nresult is A+");
+    }
+    else if(avg>80)
+    {
+        printf("\nresult is A");
+    }
+    else if(avg>70)
+    
+    {
+        printf("\nresult is B+");
+        
+    }
+    else if(avg>60)
+    {
+        printf("\nresult is B");
+        
+    }
+    else if(avg>50)
+    {
+        printf("\nresult is C");
+        
+    }
+    else if(avg>40)
+    {
+        printf("\nresult is d");
+        
+    }
+    else 
+    {
+        printf("\nfail");
+    }
+    
+    return 0;
+    
+}
+    
+
+
+
+
+
+4.// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+ int a,b,n;
+ float c;
+ 
+ printf("1.add\n2.sub\n3.mul\n4.div");
+ printf("\nenter any one option:");
+ scanf("%d",&n);
+ switch(n)
+ {
+    case 1:
+     printf("enter two numbers:");
+     scanf("%d%d",&a,&b);
+     c=a+b;
+     printf("sum is %f",c);
+     break;
+ 
+    case 2:
+     printf("enter two numbers:");
+     scanf("%d%d",&a,&b);
+     c=a-b;
+     printf("sub is %f",c);
+     break;
+ 
+ 
+  case 3:
+     printf("enter two numbers:");
+     scanf("%d%d",&a,&b);
+     c=a*b;
+     printf("mul is %f",c);
+     break;
+ 
+  case 4:
+     printf("enter two numbers:");
+     scanf("%d%d",&a,&b);
+     c=a/b;
+     printf("div is %f",c);
+     break;
+ 
+  default:
+     printf("invalid input");
+     
+ }
+
+    return 0;
+}
+
+
+5.// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() 
+{
+   int n,amount=1000,pin_num=1234,add,pin,total,withdraw,new_pin,new_pin1,bbalance;
+   printf("\nenter an option from the below:");
+    printf("\n1.deposite\n2.withdraw\n3.balance enquire\n4.pin change");
+    scanf("%d",&n);
+    switch(n)
+    {
+        case 1:
+        printf("\nenter your pin number:");
+        scanf("%d",&pin);
+        if(pin==pin_num)
+        {
+          printf("\nenter the amount to deposite:");
+        scanf("%d",&add);
+        total=add+amount;
+        printf("your current balance is %d",total);
+        
+        }
+        else
+        {
+        printf("pin does not match");
+        }
+        break;
+        
+         case 2:
+        printf("\nenter your pin number:");
+         scanf("%d",&pin);
+        if(pin==pin_num)
+        {
+            printf("enter the amount to withdraw:");
+            scanf("%d",&withdraw);
+            if(amount<withdraw)
+            {
+                printf("insufficent balance");
+            }
+            else
+            {
+                bbalance=amount-withdraw;
+                printf("your balance is %d",bbalance);
+            }
+        }
+        else
+        {
+            printf("invalid pin");
+        }
+
+        break;
+        
+        
+         case 3:
+           printf("\nenter your pin number:");
+         scanf("%d",&pin);
+        if(pin==pin_num)
+        {
+            printf("your current balance is %",amount);
+        }
+        else
+        {
+            printf("invalid pin");
+        }
+         
+        break;
+        
+         case 4:
+           printf("\nenter your pin number:");
+           scanf("%d",&pin);
+         if(pin==pin_num)
+         {
+             printf("\nenter the new pin");
+             scanf("%d",&new_pin);
+             printf("reenter your pin:");
+             scanf("%d",&new_pin1);
+             
+             if(new_pin==new_pin1)
+             {
+                 printf("your pin has been changed");
+                 
+             }
+             
+         }
+         else
+         {
+             printf("invalid pin");
+         }
+        break;
+        
+    
+    }
+    return 0;
+}
+
+
+
+
+
+
+ 7.
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main()
+{
+int n, d=0,x,y;
+printf("enter the number:");
+scanf("%d",&n);
+x=n;
+y=n;
+while(n>0)
+{
+    n=n/10;
+    d++;
+}
+printf("%d",d);
+return 0;
+}
+8.
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+int n,i,j,temp,
+scanf("%d",&n);
+int a[n];
+for(i=0;i<n;i++)
+{
+    scanf("%d",&a[i]);
+}
+for(i=0;i<n;i++)
+{
+    for(j=i+1;j<n;j++)
+    {
+        if(a[i]>a[j])
+        {
+            temp=a[i];
+            a[i]=a[j];
+            a[j]=temp;
+            
+        }
+    }
+}
+for(i=0;i<n;i++)
+{
+    printf("%d",a[i]);
+    
+}
+    printf("enet k");
+    scanf("%d",&k);
+    for(i=2;i<sqrt(k);i++)
+    {
+        if(k%i==0)
+        count++
+    }
+    if(count==0)
+    {
+        printf("x is prime")
+        
+    }
+    else
+    {
+        printf("not prime");
+    }
+    
+    
+    
+    
+    
+    
+
+
+    return 0;
+}
